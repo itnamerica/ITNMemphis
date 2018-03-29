@@ -26,35 +26,23 @@
         
         
         <div class="col-sm-offset-1 col-sm-6 pay-online-form">
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-          	<input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="23LUDK8MLDV5W" />
+          
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+          	<input name="cmd" type="hidden" value="_s-xclick" /> <input name="hosted_button_id" type="hidden" value="KDEET6A9F2UXW" />
           	<table class="col-sm-6">
           		<tbody>
           			<tr>
           				<td>
-          					<input name="on0" type="hidden" value="Payment Type" /><strong>Payment Type</strong></td>
+          					<input name="on0" type="hidden" value="Pay Online" />Pay Online</td>
           			</tr>
           			<tr>
           				<td>
-          					<select name="os0">
-                      <option value="Membership">Membership</option>
-                      <option value="Pay My Bill">Pay My Bill</option>
-                      <option value="Add Gift Certificate">Add Gift Certificate</option>
-                    </select>
-                  </td>
-          			</tr>
-          			<tr>
-          				<td>
-          					<input name="on1" type="hidden" value="Rider Name" /><strong>Rider Name</strong></td>
-          			</tr>
-          			<tr>
-          				<td>
-          					<input class="rider-name" maxlength="200" name="os1" required="" type="text" /></td>
+          					<select name="os0"><option value="Membership Individual">Membership Individual $45.00 USD</option><option value="Membership Family">Membership Family $65.00 USD</option><option value="Individual &amp; Personal Transportation deposit">Individual &amp; Personal Transportation deposit $95.00 USD</option><option value="Family &amp; Transportation Account deposit">Family &amp; Transportation Account deposit $115.00 USD</option><option value="Personal Transportation Account">Personal Transportation Account $50.00 USD</option><option value="Opti1 Personal Transportation">Opti1 Personal Transportation $100.00 USD</option><option value="Opti2 Transportation account">Opti2 Transportation account $150.00 USD</option><option value="Opti 3 Transportation Account">Opti 3 Transportation Account $175.00 USD</option><option value="Opti4 Transportation">Opti4 Transportation $200.00 USD</option><option value="Opti5 Transportation">Opti5 Transportation $300.00 USD</option></select></td>
           			</tr>
           		</tbody>
           	</table>
-          	<input class="col-sm-6 paypal" alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="http://itnamerica.org/wp-content/uploads/2018/01/PayPal-PayNow-Button.png" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
-          <p>&nbsp;</p>
+          	<input name="currency_code" type="hidden" value="USD" /> <input class="col-sm-6 paypal" alt="PayPal - The safer, easier way to pay online!" border="0" name="submit" src="http://itnamerica.org/wp-content/uploads/2018/01/PayPal-PayNow-Button.png" style="border-width: 0px; border-style: solid; height: 60px; margin-top: 30px;" type="image" /> <img alt="" border="0" height="1" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" /></form>
+          
         </div>
       </div><!--row-->
 
