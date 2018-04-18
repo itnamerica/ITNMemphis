@@ -11,7 +11,7 @@
           <a href="http://pressroom.itnamerica.org/category/itnmemphis/">
           <div class="col-sm-6 pressroom-image">
             <div class="pressroom-title"><h3>Pressroom</h3></div>
-            <img src="assets/images/icons/news-noword2.png" alt="newspaper icon"/>
+            <img ng-src={{assetsPath}}/images/icons/news-noword2.png" alt="newspaper icon"/>
             <ul>
               <li class="wow fadeInUp"><a href="http://pressroom.itnamerica.org/category/itnmemphis/">Pressroom Blog</a></li>
             </ul>
@@ -22,10 +22,10 @@
       <div class="newsletter col-sm-6 row">
         <div class="col-sm-6 newsletter-content">
           <div class="newsletter-title"><h3>Newsletters</h3></div>
-          <img src="assets/images/icons/news-noword.png" alt="press icon"/>
+          <img ng-src={{assetsPath}}/images/icons/news-noword.png" alt="press icon"/>
           <ul>
-            <li class="wow fadeInUp"><a href="assets/images/docs/newsletter/May_2014.pdf">On the Road Vote for ITNMemphis Today! May 2014</a></li>
-            <li class="wow fadeInUp"><a href="assets/images/docs/newsletter/Dec_2013.pdf">On the Road, Last Chance! December 2013</a></li>
+            <li class="wow fadeInUp"><a ng-click="redirectToURL(assetsPath + '/images/docs/newsletter/May_2014.pdf')">On the Road Vote for ITNMemphis Today! May 2014</a></li>
+            <li class="wow fadeInUp"><a ng-click="redirectToURL(assetsPath + '/images/docs/newsletter/Dec_2013.pdf')">On the Road, Last Chance! December 2013</a></li>
             <li class="wow fadeInUp" data-wow-delay=".3s"><a ui-sref="newsletters">On the Road, February 2013</a></li>
           </ul>
         </div><!--newsletter-content-->
