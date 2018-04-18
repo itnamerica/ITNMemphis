@@ -167,7 +167,7 @@
                             <span ng-if="itnForm.riderName.$error.maxlength" class="help-block">{{errorMessages.maxlength}}</span>
                           </div>
                           
-                          <div class="form-group" ng-class="{ 'has-error' : itnForm.secondRiderDob.$invalid && !itnForm.secondRiderDob.$pristine }">
+                          <div class="form-group ta-center" ng-class="{ 'has-error' : itnForm.secondRiderDob.$invalid && !itnForm.secondRiderDob.$pristine }">
                             <label for="second rider date of birth">Second Rider's Date of Birth: * - </label><br>
                             <input type="text" class="form-control" id="secondRiderDob" name="secondRiderDob" placeholder="Example: mm/dd/yyyy" ng-model="formData.secondRiderDob" ng-pattern="dobPattern" required>
                             <span ng-if="itnForm.secondRiderDob.$error.required && !itnForm.secondRiderDob.$pristine" class="help-block">{{errorMessages.required}}</span>
@@ -175,7 +175,7 @@
                           </div>
                           
                           <div class="form-group ta-center">
-                            <label for="second rider special needs">Special Needs and Mobility Assistance: *</label><br>
+                            <label for="second rider special needs">Second Rider's Special Needs and Mobility Assistance: *</label><br>
                             <label class="checkbox-inline"><input ng-model="formData.secondRiderSpecialNeeds.cane" type="checkbox" value="cane">Cane</label>
                             <label class="checkbox-inline"><input ng-model="formData.secondRiderSpecialNeeds.wheelchair" type="checkbox" value="wheelchair">Wheelchair (< 22lbs) </label>
                             <label class="checkbox-inline"><input ng-model="formData.secondRiderSpecialNeeds.blind" type="checkbox" value="blind"> Blind/Seeing Eye</label>
@@ -1099,8 +1099,8 @@
       {{formData.secondRiderName}}
       <br><label for="second rider name">Second Rider's Date of Birth: *</label><br>
       {{formData.secondRiderDob}}
-      <br><label for="second rider special needs">Special Needs and Mobility Assistance: *</label><br>
-      {{formData.secondRiderSpecialNeeds}}
+      <br><label for="second rider special needs">Second Rider's Special Needs and Mobility Assistance: *</label><br>
+      {{formData.secondRiderSpecialNeeds | inputSelected}}
       
     </div>
     
