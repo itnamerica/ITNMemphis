@@ -8,6 +8,9 @@
       
       <div class="container br-15">
         <div class="col-sm-12">
+          
+          <p class="ta-center mb-25"><em>Please allow 7-10 days to process application. You will receive mail notification when your application is processed and you may schedule rides.</em></p>
+          
             <div class="form-area br-15 border-road" id="formConfirmation">  
               
               <h2 class="app-title">Volunteer Driver Application</h2>
@@ -57,7 +60,8 @@
                   <li>Maintain confidentiality. Please do not share personal information. A professional manner is absolutely necessary.</li>
                 </ol>
                     
-                  <p class="mt-50">ITN<em>America</em> respects your privacy and will keep all volunteer information confidential. Personal information is used for aggregate reporting purposes only, to enable group distribution comparisons across affiliates and between the ITN<em>America</em> volunteer population and the US older population in general.</p>
+                  <p class="mt-50">ITN<em>America</em> respects your privacy and will keep all volunteer information confidential. Personal information is used for aggregate reporting purposes only, to enable group distribution comparisons across affiliates and between the ITN<em>America</em> volunteer population and the US older population in general.<br>
+                  ITN<em>America</em> Copyright 2018</p>
                   
                   <button type="button" role="start form" class="btn btn-lg pull-right" ng-click="showForm = true; scrollToTop()">Start Volunteer Form</button>
                   
@@ -92,6 +96,10 @@
                           <a href="" tabindex="-1">Step 6</a>
                         </li>
                       </ol>
+                      
+                      <div style="margin-bottom:200px">
+                        <button type="button" ng-click="nextTabMemberApp()" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Next</button>
+                      </div>
                       
                         <div class="form-group" ng-class="{ 'has-error' : itnForm.riderName.$invalid && !itnForm.riderName.$pristine }">
                           <label for="rider name">Name: *</label><br>
@@ -171,7 +179,7 @@
                             <span ng-if="itnForm.email.$error.pattern" class="help-block">{{errorMessages.email}}</span>
                           </div> 
 
-                      
+                          <h2>Emergency Contacts - 2 are required</h2>
                           <h2>First Emergency Contact</h2>
                           
                           <div class="form-group" ng-class="{ 'has-error' : itnForm.firstEmName.$invalid && !itnForm.firstEmName.$pristine }">
@@ -315,6 +323,11 @@
                           <a href="" tabindex="-1">Step 6</a>
                         </li>
                       </ol>
+                      
+                      <div style="margin-bottom:200px">
+                        <button type="button" ng-click="nextTabMemberApp()" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Next</button>
+                        <button type="button" ng-click="nextTabMemberApp('prev')" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Previous</button> 
+                      </div>
                       
                       <h2>References</h2>
                       
@@ -472,6 +485,11 @@
                                 <a href="" tabindex="-1">Step 6</a>
                               </li>
                             </ol>
+                            
+                            <div style="margin-bottom:200px">
+                              <button type="button" ng-click="nextTabMemberApp()" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Next</button>
+                              <button type="button" ng-click="nextTabMemberApp('prev')" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Previous</button> 
+                            </div>
                             
                             <h2>Volunteering with ITN</h2>
                             
@@ -654,13 +672,16 @@
                               </li>
                             </ol>
                             
-                        
+                            <div style="margin-bottom:200px">
+                              <button type="button" ng-click="nextTabMemberApp()" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Next</button>
+                              <button type="button" ng-click="nextTabMemberApp('prev')" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Previous</button> 
+                            </div>
                             
                             <h2>Authorization to Request Driver Record</h2>
                           
                             
                             <div class="form-group" ng-class="{ 'has-error' : itnForm.name2.$invalid && !itnForm.name2.$pristine }">
-                              <label for="name">Name *:</label><br>
+                              <label for="name">Name as it appears on Driver’s License *:</label><br>
                               <input type="text" class="form-control" id="name" name="name2" placeholder="Please print full name"   ng-model="formData.requestDriverRecord.name" ng-minlength="minlength" ng-maxlength="maxlength" required>
                               <span ng-if="itnForm.name2.$error.required && !itnForm.name2.$pristine" class="help-block">{{errorMessages.required}}</span>
                               <span ng-if="itnForm.name2.$error.minlength" class="help-block">{{errorMessages.minlength}}</span>
@@ -730,7 +751,7 @@
                             </div>
                           
                             
-                            <p><strong>Please fill in your complete name (please include any previous names used) and include date of birthand social security number, then sign below. The purpose of this background check will be for volunteer purposes.</strong>strong></p>
+                            <p><strong>Please fill in your complete name (please include any previous names used) and include date of birth and social security number, then sign below. The purpose of this background check will be for volunteer purposes.</strong></p>
                             
                             <div class="form-group" ng-class="{ 'has-error' : itnForm.name3.$invalid && !itnForm.name3.$pristine }">
                               <label for="name">Name *:</label><br>
@@ -820,6 +841,11 @@
                             </li>
                           </ol>
                           
+                          <div style="margin-bottom:200px">
+                            <button type="button" ng-click="nextTabMemberApp()" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Next</button>
+                            <button type="button" ng-click="nextTabMemberApp('prev')" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Previous</button> 
+                          </div>
+                          
                           <h2>Vehicle Description Information</h2>
                           
                           
@@ -863,7 +889,7 @@
                           </div>
                           
                           <div class="form-group" ng-class="{ 'has-error' : itnForm.registrationPlate1.$invalid && !itnForm.registrationPlate1.$pristine }">
-                            <label for="registration Plate">Registration plate *:</label><br>
+                            <label for="registration Plate">License plate *:</label><br>
                             <input type="text" class="form-control" id="registrationPlate" name="registrationPlate1" ng-model="formData.vehicleDescription.registrationPlate" ng-minlength="minlength" ng-maxlength="maxlength" required>
                             <span ng-if="itnForm.registrationPlate1.$error.required && !itnForm.registrationPlate1.$pristine" class="help-block">{{errorMessages.required}}</span>
                             <span ng-if="itnForm.registrationPlate1.$error.minlength" class="help-block">{{errorMessages.minlength}}</span>
@@ -934,7 +960,7 @@
                           </div>
                           
                           <div class="form-group">
-                            <label for="passenger capacity">Passenger capacity: *</label><br>
+                            <label for="passenger capacity">Passenger capacity - Number of people in box, people under space: *</label><br>
                             <input type="text" class="form-control" id="passengerCapacity" name="passengerCapacity" ng-model="formData.vehicleDescription.passengerCapacity" placeholder="number of people" required>people
                           </div>
                           
@@ -997,7 +1023,7 @@
                             </div>
                             
                             <div class="form-group" ng-class="{ 'has-error' : itnForm.registrationPlate2.$invalid && !itnForm.registrationPlate2.$pristine }">
-                              <label for="registration Plate">Registration plate *:</label><br>
+                              <label for="registration Plate">License plate *:</label><br>
                               <input type="text" class="form-control" id="registrationPlate" name="registrationPlate2" ng-model="formData.secondVehicleDescription.registrationPlate" ng-minlength="minlength" ng-maxlength="maxlength" required>
                               <span ng-if="itnForm.registrationPlate2.$error.required && !itnForm.registrationPlate2.$pristine" class="help-block">{{errorMessages.required}}</span>
                               <span ng-if="itnForm.registrationPlate2.$error.minlength" class="help-block">{{errorMessages.minlength}}</span>
@@ -1068,7 +1094,7 @@
                             </div>
                             
                             <div class="form-group">
-                              <label for="passenger capacity">Passenger capacity: *</label><br>
+                              <label for="passenger capacity">Passenger capacity - Number of people in box, people under space: *</label><br>
                               <input type="text" class="form-control" id="passengerCapacity" name="passengerCapacity" ng-model="formData.secondVehicleDescription.passengerCapacity" placeholder="number of people" required>people
                             </div>
                             
@@ -1147,6 +1173,10 @@
                               <a href="">Step 6</a>
                             </li>
                           </ol>
+                          
+                          <div style="margin-bottom:200px">
+                            <button type="button" ng-click="nextTabMemberApp('prev')" class="next-tab btn btn-lg btn-primary pull-right itn-green-bg"  style="margin-left:2%">Previous</button> 
+                          </div>
                           
                           
                           <h2>Volunteer Driver Change of Status</h2>
@@ -1385,7 +1415,7 @@
   
   
   <h3>Authorization to Request Driver Record</h3>
-  <br><label for="name">Name *:</label><br>
+  <br><label for="name">Name as it appears on Driver’s License *:</label><br>
   {{formData.requestDriverRecord.name}}
   <br><label for="maiden name">Previous/Maiden name (if applicable) * :</label><br>
   {{formData.requestDriverRecord.maidenName}}
@@ -1440,7 +1470,7 @@
   {{formData.vehicleDescription.type}}
   <br><label for="year">Year *:</label><br>
   {{formData.vehicleDescription.year}}
-  <br><label for="registration Plate">Registration plate *:</label><br>
+  <br><label for="registration Plate">License plate *:</label><br>
   {{formData.vehicleDescription.registrationPlate}}
   <br><label for="color">Color :</label><br>
   {{formData.vehicleDescription.color}}
@@ -1461,7 +1491,7 @@
   
   <br><label for="general condition">Please describe the general condition of the vehicle(s) and any known defects: *</label><br>
   {{formData.vehicleDescription.generalCondition}}
-  <br><label for="passenger capacity">Passenger capacity: *</label><br>
+  <br><label for="passenger capacity">Passenger capacity - Number of people in box, people under space: *</label><br>
   {{formData.vehicleDescription.passengerCapacity}}
   <br><label for="can Transport Pets">Are you willing to transport properly restrained pets: *</label><br>
   {{formData.vehicleDescription.canTransportPets}}
@@ -1481,7 +1511,7 @@
     {{formData.secondVehicleDescription.type}}
     <br><label for="year">Year *:</label><br>
     {{formData.secondVehicleDescription.year}}
-    <br><label for="registration Plate">Registration plate *:</label><br>
+    <br><label for="registration Plate">License plate *:</label><br>
     {{formData.secondVehicleDescription.registrationPlate}}
     <br><label for="color">Color :</label><br>
     {{formData.secondVehicleDescription.color}}
@@ -1502,7 +1532,7 @@
     
     <br><label for="general condition">Please describe the general condition of the vehicle(s) and any known defects: *</label><br>
     {{formData.secondVehicleDescription.generalCondition}}
-    <br><label for="passenger capacity">Passenger capacity: *</label><br>
+    <br><label for="passenger capacity">Passenger capacity - Number of people in box, people under space: *</label><br>
     {{formData.secondVehicleDescription.passengerCapacity}}
     <br><label for="can Transport Pets">Are you willing to transport properly restrained pets: *</label><br>
     {{formData.secondVehicleDescription.canTransportPets}}

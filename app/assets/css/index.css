@@ -1320,13 +1320,14 @@ form .form-area {
 }
 form .form-group {
   font-size:25px;
-  margin-top: 35px;
+  /*margin-top: 35px;*/
+  margin-top: 5px;
 }
 .member-app .steps, .volunteer-app .steps {
   font-size: 20px;
   border-radius: 15px;
 }
-form .form-group ol li {margin-top:20px}
+form .form-group ol li {margin-top:10px}
 form .member-tabs {
   margin-top:50px;
 }
@@ -1793,6 +1794,7 @@ h2,h3 {line-height:1.7}
 
 
 @media (min-width: 991px) and (max-width: 1200px) {
+  .carousel-inner .item .carousel-statement {font-size:25px;}
   .services .operate ul {
     margin-left:20%;
     margin-top:0;

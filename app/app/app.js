@@ -187,7 +187,7 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
   };
   $scope.dataPDF = null;
   $scope.formSubject = 'New application received';
-  $scope.states = ['Alabama','Alaska','American Samoa','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Federated States of Micronesia','Florida','Georgia','Guam','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Marshall Islands','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Northern Mariana Islands','Ohio','Oklahoma','Oregon','Palau','Pennsylvania','Puerto Rico','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virgin Island','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
+  $scope.states = ['Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','District of Columbia','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming'];
   $scope.itnSources = ['Family','Friend','Speaker','Doctor','Radio','Television','Flier','Book','Phone','Agency on Aging', 'Social Worker','Internet','Referred by Current Member'];
   $scope.ratings = ['None',1,2,3,4,5,6];
   $scope.keyword = '';
@@ -222,6 +222,10 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
           $scope.urlsWithKeyword = [];
           // $scope.keyword = '';
         });
+      }
+      if ( (transition.to().name === 'member-app' || transition.to().name === 'volunteer-app') || 
+      (transition.from().name === 'what-we-do' && transition.to().name === 'member-programs') ){
+        $scope.scrollToTop();
       }
   });
   
