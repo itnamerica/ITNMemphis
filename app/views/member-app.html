@@ -157,7 +157,7 @@
                         
                         <div ng-if="familyMembership">
                           
-                          <h2>Additional Information for Family Membership Only</h2>
+                          <h2 class="mt-50 mb-25">Additional Information for Family Membership Only</h2>
                           
                           <div class="form-group" ng-class="{ 'has-error' : itnForm.secondRiderName.$invalid && !itnForm.secondRiderName.$pristine }">
                             <label for="second rider name">Second Rider's Name: *</label><br>
@@ -167,7 +167,7 @@
                             <span ng-if="itnForm.riderName.$error.maxlength" class="help-block">{{errorMessages.maxlength}}</span>
                           </div>
                           
-                          <div class="form-group ta-center" ng-class="{ 'has-error' : itnForm.secondRiderDob.$invalid && !itnForm.secondRiderDob.$pristine }">
+                          <div class="form-group" ng-class="{ 'has-error' : itnForm.secondRiderDob.$invalid && !itnForm.secondRiderDob.$pristine }">
                             <label for="second rider date of birth">Second Rider's Date of Birth: * - </label><br>
                             <input type="text" class="form-control" id="secondRiderDob" name="secondRiderDob" placeholder="Example: mm/dd/yyyy" ng-model="formData.secondRiderDob" ng-pattern="dobPattern" required>
                             <span ng-if="itnForm.secondRiderDob.$error.required && !itnForm.secondRiderDob.$pristine" class="help-block">{{errorMessages.required}}</span>
