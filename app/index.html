@@ -187,6 +187,9 @@
           <ul>
             <li>(901) 833-7666</li>
             <li><a ui-sref="contact">Contact Us</a></li>
+            <li ng-hide="session"><a ui-sref="login">Login</a></li>
+            <li ng-show="session"><a ng-click="logout()">Logout</a></li>
+            <li ng-show="session"><a ui-sref="dashboard">Admin Portal</a></li>
           </ul>
         </div>
         
