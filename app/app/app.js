@@ -246,8 +246,11 @@ myApp.controller('MainController', ['$scope', '$transitions','$http', '$anchorSc
       secondReference: {},
       thirdReference: {},
       firstEmergencyContact: {},
-      secondEmergencyContact: {}
-    };    
+      secondEmergencyContact: {},
+      customerInfo: {},
+      drivingInfo: {},
+      agreement: {}
+    };
     var originalFormData = $scope.formData;
     $scope.showForm = false;
 
@@ -667,12 +670,15 @@ $scope.checkRequiredFields = function(formType){
           console.log('You must fill this required field: ', field);
           $scope.serverMessage = 'Please complete all required fields. Field missing is:  " ' + field + '"';
           return false;
+      }
     }
-  }
-  return true;
-};
+    return true;
+  };
 
-
+  $scope.validateContactInputs = function(){
+    return ($scope.formData.name && $scope.formData.email && $scope.formData.phone && $scope.formData.subject && $scope.formData.messageBody ) ? true : false;
+  };
+  
   //for contact and newsletter forms
   $scope.submitForm = function(formType){
     var contactInputsValid = $scope.validateContactInputs();
