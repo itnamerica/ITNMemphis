@@ -675,11 +675,12 @@ $scope.checkRequiredFields = function(formType){
 
   //for contact and newsletter forms
   $scope.submitForm = function(formType){
-    var objLength = Object.keys($scope.formData).length;
+    var contactInputsValid = $scope.validateContactInputs();
+    console.log('valid contact is ', contactInputsValid);
     var formObj = {};
     $scope.formType = formType;
     $scope.loading = true;
-    if (formType === 'contact' && objLength === 5){
+    if (formType === 'contact' && contactInputsValid){
       console.log('submitting valid contact form');
       formObj = {
         from: '"ITNMemphis Web User" <donotreply@itnamerica.com>',
@@ -693,7 +694,7 @@ $scope.checkRequiredFields = function(formType){
         "<p><strong>Message Body:</strong>: " + $scope.formData.messageBody + "</p>\n ",
         formType: $scope.formType
       }
-    } else if (formType === 'newsletter' && objLength === 1){
+    } else if (formType === 'newsletter' && $scope.formData.email){
       console.log('submitting valid newsletter form');
         formObj = {
           from: '"ITNMemphis Web User" <donotreply@itnamerica.com>',
