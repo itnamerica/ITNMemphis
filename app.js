@@ -82,9 +82,11 @@ app.post('/sendmail', function(req, res){
         // transporter.close();
     });
     
-    console.log('starting mongo block',req.body);
-    console.log(req.body.text.email);
-    console.log('formtype is ', req.body.formType);
+    MongoClient.connect('mongodb://itnadmin:itnUser0136!@ds153700.mlab.com:53700/itnmemphis', function(err, client) {
+      if (err) { 
+        console.log('db not connecting, but inside mongo block', err);
+      };
+      db = client.db('itnmemphis');
 
       
       var objWithPDF; var pdfVal;
